@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
 import Navigation from "../components/Navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const atkinsonHyperlegible = Atkinson_Hyperlegible({
+  weight: ['400', '700'],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-atkinson",
 });
 
 export const metadata = {
@@ -21,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${atkinsonHyperlegible.variable} antialiased font-sans`}
       >
         <Navigation />
         <main>{children}</main>
