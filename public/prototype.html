@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ArtÁbil - Making Art Visible for Everyone</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#0b0b0d",
+                        "studio-gray": "#1a1e26",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "hyper": ["Atkinson Hyperlegible", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .split-hero-mask {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+        }
+        .hyperlegible { font-family: 'Atkinson Hyperlegible', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-symbols-outlined text-white text-2xl" data-icon="visibility">visibility</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight hyperlegible">ArtÁbil</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#galeria">Galería</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#simulador">Simulador</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#recursos">Recursos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#dev">Developers</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#contacto">Usuarios</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-semibold border border-white/20 rounded-lg hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="accessibility_new">accessibility_new</span>
+                    Accessibility Settings
+                </button>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-10 pb-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 z-10">
+<div class="space-y-4">
+<span class="inline-block px-3 py-1 bg-primary/20 text-primary text-xs font-bold tracking-widest uppercase rounded">Perspective Shift</span>
+<h1 class="text-5xl lg:text-7xl font-bold leading-[1.1] hyperlegible">
+                            Making Art <br/><span class="text-primary italic">Visible</span> for Everyone
+                        </h1>
+<p class="text-lg text-slate-400 max-w-lg leading-relaxed">
+                            Experience fine art through the lens of inclusivity. Our advanced vision impairment simulation and technical analysis tools bridge the gap between masterpiece and accessibility.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:translate-y-[-2px] transition-all flex items-center gap-2">
+                            Explore Gallery
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-studio-gray border border-white/10 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-studio-gray/50 transition-all">
+                            View API Docs
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<!-- Split Image Comparison -->
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative border border-white/10">
+<!-- Protanopia View (Full background) -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Classic painting with Protanopia color filter applied" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIYTyPrRV8Eq1-PPxxSLFSXbBaGWMgjelnnz8wnE6uAHZY_EWt7meciCdQ_aW2AOL_uaLQEbVOd06_CAvv8_fhpj-lMp6UZuYBOZuXOY0N1qoNFFOAje8uDK3I5gZfAVnI41FfZu3_U2mHSwjRebE_Fft29K9Q_P-AJZMA4g9NmLFKeHKPt_KxsebHHCyUswqjTxFLby01pzOfsY7Or01QvJfGgLGMZBSdl4P9Nkbrreaw6p4a7OIpvp7BWJ96rXNAcvSyO8Y2TK0");'></div>
+<!-- Original View (Split) -->
+<div class="absolute inset-0 bg-cover bg-center split-hero-mask transition-all duration-700" data-alt="Original high saturation classic painting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdpVos4bjxXsrYp8oLL4znPQK3fA-yCPc7dPEuaQqOFogIZaz-JrpSI7lXUZRoNXKBnZwljrcSs06wkl34pa_nYbn45gMyEqyEObbTYRVD6oqXi2kGb0rE1anGGNhHv1nrKocSe06ed-8gZHlBWQA0LwfPy8gtG8I46qkteoVUvtq9xhJ51Q8MOaGU39XTThnLki9L-y19st4lmswTXqtUxpQ83-TUI9_hmHl-mqfdEwKDrylT3xDkXMe4xsRNw8zUw9JYnxpIA0s"); filter: saturate(1.5);'></div>
+<!-- Comparison Line -->
+<div class="absolute inset-0 flex justify-center pointer-events-none">
+<div class="w-1 h-full bg-white/30 backdrop-blur-sm relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-black" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+<!-- Labels -->
+<div class="absolute top-6 left-6 px-3 py-1 bg-black/60 backdrop-blur-md rounded text-xs font-bold uppercase tracking-widest text-white border border-white/10">Original</div>
+<div class="absolute top-6 right-6 px-3 py-1 bg-black/60 backdrop-blur-md rounded text-xs font-bold uppercase tracking-widest text-white border border-white/10">Simulated</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 blur-3xl rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Mission Section -->
+<section class="py-24 bg-studio-gray/30 border-y border-white/5" id="mission">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-6 hyperlegible">Our Mission &amp; Vision</h2>
+<div class="space-y-6 text-slate-400 text-lg leading-relaxed">
+<p>ArtÁbil is dedicated to the social and educational impact of analyzing accessibility in masterpieces. We believe that art history should be experienced by everyone, regardless of their visual capabilities.</p>
+<p>We empower curators, educators, and developers to create a more inclusive world of art through data-driven simulation and technical rigor. By identifying accessibility barriers in classic works, we can develop better descriptive audio, tactile exhibits, and digital adaptations.</p>
+</div>
+<div class="mt-10 flex gap-8">
+<div class="flex flex-col">
+<span class="text-4xl font-bold text-white">50k+</span>
+<span class="text-sm text-slate-500 uppercase tracking-wider font-bold">Paintings Indexed</span>
+</div>
+<div class="w-px h-12 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="text-4xl font-bold text-white">12</span>
+<span class="text-sm text-slate-500 uppercase tracking-wider font-bold">Impairment Modes</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-48 bg-primary/10 rounded-2xl border border-primary/20 flex flex-col items-center justify-center p-6 text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="school">school</span>
+<span class="font-bold">Educational Outreach</span>
+</div>
+<div class="h-48 bg-white/5 rounded-2xl border border-white/10 flex flex-col items-center justify-center p-6 text-center mt-8">
+<span class="material-symbols-outlined text-4xl text-white/60 mb-3" data-icon="museum">museum</span>
+<span class="font-bold">Museum Partnerships</span>
+</div>
+<div class="h-48 bg-white/5 rounded-2xl border border-white/10 flex flex-col items-center justify-center p-6 text-center -mt-8">
+<span class="material-symbols-outlined text-4xl text-white/60 mb-3" data-icon="diversity_3">diversity_3</span>
+<span class="font-bold">Community Driven</span>
+</div>
+<div class="h-48 bg-white/5 rounded-2xl border border-white/10 flex flex-col items-center justify-center p-6 text-center">
+<span class="material-symbols-outlined text-4xl text-white/60 mb-3" data-icon="science">science</span>
+<span class="font-bold">Research Focused</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Section -->
+<section class="py-24" id="features">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-4xl font-bold mb-4 hyperlegible">Core Platform Features</h2>
+<p class="text-slate-400 max-w-2xl">Sophisticated tools for art accessibility and inclusive design research.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1: Simulation -->
+<div class="group p-8 bg-studio-gray rounded-2xl border border-white/10 hover:border-primary/50 transition-all">
+<div class="w-full aspect-video bg-cover bg-center rounded-lg mb-6 overflow-hidden grayscale group-hover:grayscale-0 transition-all" data-alt="Close up of brush strokes on a canvas" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAU5rnsVgtFynjBqFOMCQ7pkFt4w_B33DdY4US1z9I9xLDUs345gmpV7JQgx4WZleH08Q20LGIBdnguT87f4SsGq4EZHscLjUpJizSnyIXqDtSmdCIe7QZVAcQ-uVaB0tiBfuJGffnLKpg436heejRDola5mR1ooWaD8aA2E7u2DqQMOk5VajmFKZv0QaTbSkUWpdZvBO4uBMgjQ0-pMqn0uY8wEYZfshfrFN5V0AmsZG4ulUQThiyK7A_6xQvL00zHZ4LvajAOpaE");'></div>
+<h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                            Vision Simulation
+                            <span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+</h3>
+<p class="text-slate-400 leading-relaxed mb-6 text-sm">
+                            Interactive preview of Protanopia, Deuteranopia, and Tritanopia across classic paintings and contemporary art.
+                        </p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                Real-time shader processing
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                Customizable severity levels
+                            </li>
+</ul>
+</div>
+<!-- Feature 2: WCAG Analysis -->
+<div class="group p-8 bg-studio-gray rounded-2xl border border-white/10 hover:border-primary/50 transition-all">
+<div class="w-full aspect-video bg-[#0b0b0d] rounded-lg mb-6 p-4 flex flex-col justify-center gap-3">
+<div class="flex justify-between items-center text-[10px] font-bold uppercase text-slate-500 tracking-tighter">
+<span>Contrast Ratio</span>
+<span class="text-green-500">Pass (AAA)</span>
+</div>
+<div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-2">
+<div class="bg-white/5 p-2 rounded border border-white/10">
+<div class="text-[8px] text-slate-500 uppercase">Protan</div>
+<div class="text-xs font-bold">4.5:1</div>
+</div>
+<div class="bg-white/5 p-2 rounded border border-white/10">
+<div class="text-[8px] text-slate-500 uppercase">Deuter</div>
+<div class="text-xs font-bold">7.2:1</div>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                            Technical Analysis
+                            <span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
+</h3>
+<p class="text-slate-400 leading-relaxed mb-6 text-sm">
+                            Detailed WCAG scorecard visuals including contrast ratios and compliance metrics for art assets and gallery UI.
+                        </p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                Pixel-perfect color extraction
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                WCAG 2.1 &amp; 3.0 standards
+                            </li>
+</ul>
+</div>
+<!-- Feature 3: Dev Tools -->
+<div class="group p-8 bg-studio-gray rounded-2xl border border-white/10 hover:border-primary/50 transition-all" id="dev">
+<div class="w-full aspect-video bg-[#0b0b0d] rounded-lg mb-6 font-mono text-[10px] p-4 text-slate-300 border border-white/5">
+<span class="text-blue-400">import</span> ArtAbil <span class="text-blue-400">from</span> <span class="text-green-400">'@artabil/core'</span>;<br/><br/>
+<span class="text-slate-500">// Initialize simulation</span><br/>
+<span class="text-blue-400">const</span> analyzer = <span class="text-blue-400">new</span> ArtAbil({<br/>
+                              mode: <span class="text-green-400">'protanopia'</span>,<br/>
+                              severity: <span class="text-orange-400">1.0</span><br/>
+                            });<br/><br/>
+<span class="text-blue-400">await</span> analyzer.process(canvas);
+                        </div>
+<h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+                            Developer Tools
+                            <span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+</h3>
+<p class="text-slate-400 leading-relaxed mb-6 text-sm">
+                            Seamlessly integrate accessibility data into your projects with our robust API and code snippet library.
+                        </p>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                React, Vue, &amp; Three.js SDKs
+                            </li>
+<li class="flex items-center gap-2 text-xs font-medium text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-base" data-icon="check_circle">check_circle</span> 
+                                RESTful Art-Metadata API
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase Carousel -->
+<section class="py-24 bg-studio-gray/50" id="showcase">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="text-4xl font-bold mb-4 hyperlegible">Masterpiece Showcase</h2>
+<p class="text-slate-400">Featured works currently undergoing accessibility auditing.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Artwork 1 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden relative mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Van Gogh's Starry Night painting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB4eaLdUIyt8szUfUO9_ngTpSGqureLHgapx_baZ6gC8DQDcuRLzen4epl4CO92w5aIGALW7PxiXU0_rTSxbHHDf0MxQSRecBYBrsMzD8qyyyumpJc3LIfBRu9762pbTleUg7UzZg5jz71D6ipbYVMQU3MZGF9zqE3uGMB0hQXGGotpR8p6d1lptU2eHgvKEIKPN6hJEjhlp3BwwcnY5nTN2I7W0ORcHPEy_e4MqIxCVRRUn7BQX0XQOK3yybjoxWg2nK8RQfKQk4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<span class="bg-green-500/20 text-green-400 text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">WCAG AA Certified</span>
+<span class="bg-white/10 text-white text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">Impressionism</span>
+</div>
+</div>
+<h4 class="text-xl font-bold">The Starry Night</h4>
+<p class="text-sm text-slate-500">Vincent van Gogh, 1889</p>
+</div>
+<!-- Artwork 2 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden relative mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Johannes Vermeer's Girl with a Pearl Earring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_pspEbk2GoHX8-8qgeqmM1ByzG9og-VhoiFmzZEfiWae8POhtr2nLd2IYJP3_5GXIP93Nb9Nh61AOmUHnIHA8Pr8MX0NMlMDDoG8v1SwZAcGyCywzB5dXPbqGrROeeQYmFTpoW4X9GD9eAqbxitL0VMrwUFGKDirt3hCVHHvvJAyEUBtm7nVm0lBEQaPsElqVVuCC9lk9UcnXXWcA9I0rs1dal1m0rWxSz7RX34qzrAtgG384tTwuQLb5SoI1EF2TGhVR0MV7vEg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<span class="bg-orange-500/20 text-orange-400 text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">Review Pending</span>
+<span class="bg-white/10 text-white text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">Baroque</span>
+</div>
+</div>
+<h4 class="text-xl font-bold">Girl with a Pearl Earring</h4>
+<p class="text-sm text-slate-500">Johannes Vermeer, 1665</p>
+</div>
+<!-- Artwork 3 -->
+<div class="min-w-[320px] md:min-w-[400px] snap-start group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden relative mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Katsushika Hokusai's The Great Wave off Kanagawa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWIeRkUmg-Qmaq1lApzyj8ghDp0MM6Bw3d2nAhit7hJYoBmKBle2Wdc44KzbH8deB2WbEGwXbMiCjQ7Xe5RgY-x-7zeDPocVkRkc4cnaxxcgG4wb_SiMrmenbpOF4DRjRMQU3d1WY5xuMuAxS-Wais5lp7-mnXx1FcErOilTZQRcYAF3pY_Bul9OBVYFd8lxEQz1b6TZ_bbGoA4-lJvLsNNCCgBq5lgLxODFZXp8UcgR_3Ji97NzXqmxmW1NdY_rmKgjL-ddL4QA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+<span class="bg-green-500/20 text-green-400 text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">WCAG AAA Certified</span>
+<span class="bg-white/10 text-white text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-md">Ukiyo-e</span>
+</div>
+</div>
+<h4 class="text-xl font-bold">The Great Wave</h4>
+<p class="text-sm text-slate-500">Katsushika Hokusai, 1831</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Footer Info Section -->
+<section class="py-24">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold mb-6 hyperlegible">Join the Inclusive Art Movement</h2>
+<p class="text-slate-400 text-lg mb-10">Whether you're a museum curator looking to audit your digital gallery or a developer building accessible art tools, ArtÁbil provides the technical foundation you need.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all">Sign Up Free</button>
+<button class="bg-white/5 border border-white/10 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">Request Demo</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-dark border-t border-white/10 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="bg-primary p-1 rounded-lg">
+<span class="material-symbols-outlined text-white text-xl" data-icon="visibility">visibility</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight hyperlegible">ArtÁbil</h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">Defining the next generation of accessibility standards for art and cultural digital experiences.</p>
+<div class="flex gap-4 mt-6">
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="hub">hub</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-slate-300">Platform</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Vision Simulator</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Reference</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Showcase Archive</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">WCAG Tooling</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-slate-300">Organization</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Mission Statement</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Research Papers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Museum Partners</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Social Impact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-slate-300">Accessibility</h4>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">VPAT Report</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contrast Settings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Screen Reader Optimization</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legal Disclaimer</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 gap-6">
+<p class="text-slate-600 text-xs font-medium">© 2024 ArtÁbil Analysis Platform. All rights reserved.</p>
+<div class="flex gap-4 items-center opacity-40">
+<div class="flex items-center gap-1 border border-white/20 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]" data-icon="verified">verified</span>
+<span class="text-[10px] font-bold uppercase">WCAG 2.1 Compliant</span>
+</div>
+<div class="flex items-center gap-1 border border-white/20 px-2 py-1 rounded">
+<span class="material-symbols-outlined text-[14px]" data-icon="shield">shield</span>
+<span class="text-[10px] font-bold uppercase">HCI Certified</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
